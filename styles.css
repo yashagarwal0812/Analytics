@@ -1,0 +1,581 @@
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #8794BA;
+    --main-color: #172755;
+    --pink: #EF2A82;
+    --bg-color: rgb(229, 229, 229, 0.2);
+
+    --standard-width: 1181px;
+    --font-family: 'Roboto', sans-serif;
+}
+
+/* GENERAL STYLES */
+
+html,
+body {
+    font-family: var(--font-family);
+    width: 100%;
+    /* position: relative; */
+    overflow-x: hidden;
+}
+
+main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+body {
+    padding: 60px 0 0 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 400;
+    transition: all 0.25s ease;
+}
+
+button {
+    padding: 10px 25px;
+    font-size: 16px;
+    line-height: 18.75px;
+    border-radius: 20px;
+    box-shadow: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.section-container {
+    height: auto;
+    width: 100%;
+    max-width: var(--standard-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.two-column {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    position: relative;
+    overflow-y: visible;
+}
+
+.two-column>.left {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 1em 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.two-column>.right {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 0 0 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+main {
+    height: auto;
+}
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: var(--standard-width);
+    box-sizing: border-box;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.menu a {
+    color: var(--secondary-color);
+    margin: 0 18px;
+    font-weight: 400;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.reg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.reg button {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+}
+
+.reg button:nth-of-type(2) {
+    border: 1px solid var(--secondary-color);
+}
+
+.reg button:nth-of-type(2):hover {
+    color: var(--main-color);
+    background-color: var(--secondary-color);
+    border: 1px solid var(--main-color);
+}
+
+/* HERO STYLES */
+
+.hero {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.hero .left>h1 {
+    font-size: 50px;
+    line-height: 60px;
+    color: var(--primary-color);
+    width: 90%;
+    margin: 152px 0 15px 0;
+    /* display: inline-block;
+    vertical-align: top; */
+}
+
+.hero .left>p {
+    display: inline-block;
+    color: var(--secondary-color);
+    font-size: 18px;
+    line-height: 27px;
+    width: 90%;
+}
+
+.hero button {
+    background-color: var(--pink);
+    color: var(--primary-color);
+    margin-top: calc(49px - 18px);
+    padding: 12px 50px;
+    border-radius: 24px;
+    border: 1px solid var(--pink);
+}
+
+.hero button:hover {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+#hero-big-chart {
+    position: relative;
+    transform: translate(50px, 70px);
+    /* top: 69px;
+    right: -350px; */
+    z-index: 2;
+}
+
+#hero-small-chart {
+    position: absolute;
+    top: 200px;
+    right: 175px;
+    z-index: 3;
+}
+
+.hero::after {
+    content: "";
+    background-color: var(--pink);
+    height: 1300px;
+    width: 100%;
+    position: absolute;
+    top: -640px;
+    left: 0;
+    z-index: -2;
+    transform: skewY(-10deg);
+}
+
+.hero::before {
+    content: "";
+    width: 100%;
+    height: 1300px;
+    background-color: var(--main-color);
+    position: absolute;
+    top: -660px;
+    left: 0px;
+    transform: skewY(-10deg);
+    z-index: -1;
+}
+
+/* MAIN FEATURES STYLES */
+
+.main-features-section {
+    padding-top: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main-features-section .main-features {
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    color: var(--main-color);
+}
+
+.main-features-section p {
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: var(--secondary-color);
+    width: 90%;
+}
+
+.main-features-section .features {
+    padding: 80px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-features-section .card {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main-features-section .card h3 {
+    font-weight: 700;
+    margin: 0;
+    padding: 26px 0 15px 0;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--main-color);
+}
+
+.main-features-section .card p {
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+/* CHART GRID STYLES */
+
+.chart-grid-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 280px;
+}
+
+.chart-grid-section .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.chart-grid-section .card .text {
+    text-align: center;
+    width: 47%;
+    box-sizing: border-box;
+    padding: 40px;
+}
+
+.chart-grid-section .card .text h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    color: var(--main-color);
+}
+
+.chart-grid-section .card .text p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--secondary-color);
+}
+
+.chart-grid-section .card .chart {
+    width: 53%;
+}
+
+/* PRICING PLANS STYLES */
+
+.pricing-plans-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.pricing-plans-section::after {
+    content: "";
+    width: 100%;
+    height: 650px;
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: 260px;
+    left: 0px;
+    transform: skewY(-10deg);
+    z-index: -1;
+}
+
+.pricing-plans-section::before {
+    content: "";
+    width: 100%;
+    height: 500px;
+    background-color: var(--pink);
+    position: absolute;
+    bottom: 430px;
+    left: 0px;
+    transform: skewY(-10deg);
+    z-index: -1;
+}
+
+.pricing-plans-section h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.pricing-plans-section>.section-container>p {
+    padding-bottom: 50px;
+    width: 75%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+.pricing-plans-section .plans {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pricing-plans-section .plans .card {
+    background-color: #0F1F4B;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding: 50px;
+    transition: all 0.25s ease;
+}
+
+.pricing-plans-section .plans .card:nth-of-type(2) {
+    background-color: var(--primary-color);
+    color: var(--main-color);
+}
+
+/* .pricing-plans-section .plans .card:hover {
+    scale: 1.05;
+} */
+
+.pricing-plans-section .plans .card .heading {
+    padding: 0 0 37px 0;
+}
+
+.pricing-plans-section .plans .card h3 {
+    margin: 0;
+    padding: 0;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.pricing-plans-section .plans .card:nth-of-type(2) h3 {
+    color: var(--main-color);
+}
+
+.pricing-plans-section .plans .card h4 {
+    padding: 10px 0 0 0;
+    margin: 0;
+    color: var(--secondary-color);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.pricing-plans-section .plans .card .price {
+    padding: 28px;
+    width: 60%;
+    border-top: 1px solid var(--secondary-color);
+}
+
+.pricing-plans-section .plans .card .price span {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    color: var(--primary-color);
+    padding: 0 0 0 2px;
+    box-sizing: border-box;
+}
+
+.pricing-plans-section .plans .card .price p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--secondary-color);
+}
+
+.pricing-plans-section .plans .card .price .dollar-sign {
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+.pricing-plans-section .plans .card:nth-last-of-type(2) .price p {
+    color: var(--main-color);
+}
+
+.pricing-plans-section .plans .card:nth-last-of-type(2) .price span {
+    color: var(--main-color);
+}
+
+.pricing-plans-section .plans .card button {
+    padding: 15px 80px;
+    border-radius: 40px;
+    background-color: #0F1F4B;
+    border: 1px solid var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.pricing-plans-section .plans .card:nth-of-type(2) button {
+    background-color: var(--pink);
+    border: 1px solid var(--pink);
+}
+
+.pricing-plans-section .plans .card button:hover {
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+.pricing-plans-section .plans .card:nth-of-type(2) button:hover {
+    color: var(--pink);
+    background-color: var(--primary-color);
+    border: 1px solid var(--pink);
+}
+
+/* FOOTER */
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: var(--standard-width);
+    box-sizing: border-box;
+    padding: 50px 0;
+    border-top: 1px solid #2A407C;
+}
+
+#footer>.section-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: var(--standard-width);
+}
+
+.items {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.items a {
+    color: var(--secondary-color);
+    margin: 0 18px;
+    font-weight: 400;
+}
+
+.items a:hover {
+    text-decoration: underline;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.social img {
+    padding: 0 10px;
+}
+
+#logo-grey {
+    width: 120px;
+    height: auto;
+}
+
+footer::after {
+    content: "";
+    width: 100%;
+    height: 500px;
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+}
